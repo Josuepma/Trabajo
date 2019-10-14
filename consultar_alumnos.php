@@ -23,15 +23,11 @@
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
-	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
-	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="../../../../global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
 
 	<script src="assets/js/app.js"></script>
-	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/datatables_basic.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -41,7 +37,7 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
-			<a href="index.html" class="d-inline-block">
+			<a href="index.php" class="d-inline-block">
 				<img src="../../../../global_assets/images/logo_light.png" alt="">
 			</a>
 		</div>
@@ -406,8 +402,8 @@
 
 						<!-- Main -->
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
-						<li class="nav-item">
-							<a href="index.html" class="nav-link active">
+						<li class="nav-item nav-item-closed">
+							<a href="index.php" class="nav-link">
 								<i class="icon-home4"></i>
 								<span>
 									Dashboard
@@ -415,46 +411,44 @@
 							</a>
 						</li>
 						
+						
 						<!-- /main -->
 
-						<!-- Forms -->
-			
-						<li class="nav-item nav-item-submenu nav-item-closed">
+						<!-- opciones -->
+					
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Alumnos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="agregar_alumnos.html" class="nav-link active">Agregar</a></li>
-								<li class="nav-item"><a href="consultar_alumnos.html" class="nav-link active">Lista</a></li>
-								<!--
-								<li class="nav-item"><a href="agregar_materias.html" class="nav-link active">Agregar materias</a></li>
-								<li class="nav-item"><a href="agregar_Materias.html" class="nav-link active">Agregar materias</a></li>-->
+								<li class="nav-item"><a href="agregar_alumnos.php" class="nav-link active">Agregar</a></li>
+								<li class="nav-item"><a href="consultar_alumnos.php" class="nav-link active">Lista</a></li>
 							</ul>
 						</li>
 
 						<li class="nav-item nav-item-submenu nav-item-closed">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Maestros</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="agregar_maestros.html" class="nav-link active">Agregar</a></li>
-								<li class="nav-item"><a href="consultar_maestros.html" class="nav-link active">Lista</a></li>
+								<li class="nav-item"><a href="agregar_maestros.php" class="nav-link active">Agregar</a></li>
+								<li class="nav-item"><a href="consultar_maestros.php" class="nav-link active">Lista</a></li>
 							</ul>
 						</li>
 
 						<li class="nav-item nav-item-submenu nav-item-closed">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Materias</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="agregar_materias.html" class="nav-link active">Agregar</a></li>
-								<li class="nav-item"><a href="consultar_materias.html" class="nav-link active">Lista</a></li>
+								<li class="nav-item"><a href="agregar_materias.php" class="nav-link active">Agregar</a></li>
+								<li class="nav-item"><a href="consultar_materias.php" class="nav-link active">Lista</a></li>
 							</ul>
 						</li>
 
 						<li class="nav-item nav-item-submenu nav-item-closed">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Grupos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="agregar_grupos.html" class="nav-link active">Agregar</a></li>
-								<li class="nav-item"><a href="consultar_grupos.html" class="nav-link active">Lista</a></li>
+								<li class="nav-item"><a href="agregar_grupos.php" class="nav-link active">Agregar</a></li>
+								<li class="nav-item"><a href="consultar_grupos.php" class="nav-link active">Lista</a></li>
 							</ul>
 						</li>
 
-						<!-- /forms -->
+						<!-- /opciones -->
 
 					</ul>
 				</div>
@@ -474,7 +468,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Principal</span> - Tablero</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold"></span>Consultar alumnos</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -490,8 +484,8 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-							<span class="breadcrumb-item active">Dashboard</span>
+							<a href="index.php" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+							<span class="breadcrumb-item active">Consultar alumnos</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -528,427 +522,355 @@
 			<!-- Content area -->
 			<div class="content">
 
-				<!-- Main charts -->
-				<div class="row">
-					<div class="table-responsive">
-						<table class="table text-nowrap">
-							<thead>
-								<tr>
-									<th>Campaign</th>
-									<th>Client</th>
-									<th>Changes</th>
-									<th>Budget</th>
-									<th>Status</th>
-									<th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="table-active table-border-double">
-									<td colspan="5">Today</td>
-									<td class="text-right">
-										<span class="progress-meter" id="today-progress" data-progress="30"></span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/facebook.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Facebook</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-blue mr-1"></span>
-													02:00 - 03:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Mintlime</span></td>
-									<td><span class="text-success-600"><i class="icon-stats-growth2 mr-2"></i> 2.43%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$5,489</h6></td>
-									<td><span class="badge bg-blue">Active</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/youtube.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Youtube videos</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-danger mr-1"></span>
-													13:00 - 14:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">CDsoft</span></td>
-									<td><span class="text-success-600"><i class="icon-stats-growth2 mr-2"></i> 3.12%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$2,592</h6></td>
-									<td><span class="badge bg-danger">Closed</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/spotify.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Spotify ads</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-grey-400 mr-1"></span>
-													10:00 - 11:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Diligence</span></td>
-									<td><span class="text-danger"><i class="icon-stats-decline2 mr-2"></i> - 8.02%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$1,268</h6></td>
-									<td><span class="badge bg-grey-400">On hold</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/twitter.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Twitter ads</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-grey-400 mr-1"></span>
-													04:00 - 05:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Deluxe</span></td>
-									<td><span class="text-success-600"><i class="icon-stats-growth2 mr-2"></i> 2.78%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$7,467</h6></td>
-									<td><span class="badge bg-grey-400">On hold</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-
-								<tr class="table-active table-border-double">
-									<td colspan="5">Yesterday</td>
-									<td class="text-right">
-										<span class="progress-meter" id="yesterday-progress" data-progress="65"></span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/bing.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Bing campaign</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-success mr-1"></span>
-													15:00 - 16:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Metrics</span></td>
-									<td><span class="text-danger"><i class="icon-stats-decline2 mr-2"></i> - 5.78%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$970</h6></td>
-									<td><span class="badge bg-success-400">Pending</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/amazon.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Amazon ads</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-danger mr-1"></span>
-													18:00 - 19:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Blueish</span></td>
-									<td><span class="text-success-600"><i class="icon-stats-growth2 mr-2"></i> 6.79%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$1,540</h6></td>
-									<td><span class="badge bg-blue">Active</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/dribbble.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Dribbble ads</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-blue mr-1"></span>
-													20:00 - 21:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Teamable</span></td>
-									<td><span class="text-danger"><i class="icon-stats-decline2 mr-2"></i> 9.83%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$8,350</h6></td>
-									<td><span class="badge bg-danger">Closed</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-
-
-				<!-- Dashboard content -->
-				<div class="row">
-					<div class="col-sm-6">
-
-						<!-- Available hours -->
-						<div class="card text-center">
-							<div class="card-body">
-
-			                	<!-- Progress counter -->
-								<div class="svg-center position-relative" id="hours-available-progress"></div>
-								<!-- /progress counter -->
-
-
-								<!-- Bars -->
-								<div id="hours-available-bars"></div>
-								<!-- /bars -->
-
-							</div>
-						</div>
-						<!-- /available hours -->
-
+				<!-- Basic datatable -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Consultar alumnos</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+	                	</div>
 					</div>
 
-					<div class="col-sm-6">
+					<div align="right"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregar">Agregar </button></div>
 
-						<!-- Productivity goal -->
-						<div class="card text-center">
-							<div class="card-body">
+					<table class="table datatable-basic">
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Apellido</th>
+								<th>Matrícula</th>
+								<th>Correo</th>
+								<th>Celular</th>
+								<th>Carrera</th>
+								<th>Estado</th>
+								<th class="text-center">Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Marth</td>
+								<td>Simpson</td>
+								<td>1930156</td>
+								<td>1930156@upv.edu.mx</td>
+								<td>8343112400</td>
+								<td>ITI</td>
+								<td><span class="badge badge-success">activo</span></td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
 
-								<!-- Progress counter -->
-								<div class="svg-center position-relative" id="goal-progress"></div>
-								<!-- /progress counter -->
-
-								<!-- Bars -->
-								<div id="goal-bars"></div>
-								<!-- /bars -->
-
-							</div>
-						</div>
-						<!-- /productivity goal -->
-
-					</div>
-
-					<div class="col-lg-4">
-
-						<!-- Members online -->
-						<div class="card bg-teal-400">
-							<div class="card-body">
-								<div class="d-flex">
-									<h3 class="font-weight-semibold mb-0">3,450</h3>
-									<span class="badge bg-teal-800 badge-pill align-self-center ml-auto">+53,6%</span>
-			                	</div>
-			                	
-			                	<div>
-									Members online
-									<div class="font-size-sm opacity-75">489 avg</div>
-								</div>
-							</div>
-
-							<div class="container-fluid">
-								<div id="members-online"></div>
-							</div>
-						</div>
-						<!-- /members online -->
-
-					</div>
-
-					<div class="col-lg-4">
-
-						<!-- Current server load -->
-						<div class="card bg-pink-400">
-							<div class="card-body">
-								<div class="d-flex">
-									<h3 class="font-weight-semibold mb-0">49.4%</h3>
-									<div class="list-icons ml-auto">
-				                		<div class="list-icons-item dropdown">
-				                			<a href="#" class="list-icons-item dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i></a>
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-sync"></i> Update data</a>
-												<a href="#" class="dropdown-item"><i class="icon-list-unordered"></i> Detailed log</a>
-												<a href="#" class="dropdown-item"><i class="icon-pie5"></i> Statistics</a>
-												<a href="#" class="dropdown-item"><i class="icon-cross3"></i> Clear list</a>
+												<button type="button" class="dropdown-item" data-toggle="modal" data-target="#modificar"><i class="icon-pencil5"></i> Modificar</button>
+												<button type="button" class="dropdown-item" data-toggle="modal" data-target="#eliminar"><i class="icon-cancel-square2"></i> Eliminar</button>
 											</div>
-				                		</div>
-			                		</div>
-			                	</div>
-			                	
-			                	<div>
-									Current server load
-									<div class="font-size-sm opacity-75">34.6% avg</div>
-								</div>
-							</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Sheldon</td>
+								<td>sampson</td>
+								<td>1930157</td>
+								<td>1930157@upv.edu.mx</td>
+								<td>8343112401</td>
+								<td>ITI</td>
+								<td><span class="badge badge-secondary">Inactive</span></td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
 
-							<div id="server-load"></div>
-						</div>
-						<!-- /current server load -->
-
-					</div>
-
-					<div class="col-lg-4">
-
-						<!-- Today's revenue -->
-						<div class="card bg-blue-400">
-							<div class="card-body">
-								<div class="d-flex">
-									<h3 class="font-weight-semibold mb-0">$18,390</h3>
-									<div class="list-icons ml-auto">
-				                		<a class="list-icons-item" data-action="reload"></a>
-				                	</div>
-			                	</div>
-			                	
-			                	<div>
-									Today's revenue
-									<div class="font-size-sm opacity-75">$37,578 avg</div>
-								</div>
-							</div>
-
-							<div id="today-revenue"></div>
-						</div>
-						<!-- /today's revenue -->
-
-					</div>
-
-
-
+											<div class="dropdown-menu dropdown-menu-right">
+												<button type="button" class="dropdown-item" data-toggle="modal" data-target="#modificar"><i class="icon-pencil5"></i> Modificar</button>
+												<button type="button" class="dropdown-item" data-toggle="modal" data-target="#eliminar"><i class="icon-cancel-square2"></i> Eliminar</button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
+				<!-- /basic datatable -->
 
-
-				<!-- /dashboard content -->
-
-				
-	
 			</div>
 			<!-- /content area -->
 
+
+			<!-- agregar alumnos -->
+			<div id="agregar" class="modal fade" tabindex="-1">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Agregar</h5>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<form action="#" class="form-horizontal">
+							<div class="modal-body">
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Nombre:</label>
+									<div class="col-lg-9">
+										<input type="text" class="form-control" placeholder="Josue">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Apellido:</label>
+									<div class="col-lg-9">
+										<input type="text" class="form-control" placeholder="Perales">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Contraseña:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="Contraseña">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Matricula:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="1930168">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Correo electrónico:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="jepma2001@gmail.com">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Correo de recuperación:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="artus.mx@gmail.com">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Celular:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="8342213114">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Celular de recuperación:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="8341506192">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Carrera:</label>
+									<div class="col-lg-9">
+										<select class="form-control form-control-select2" data-fouc>
+
+											<option value="ITI">ITI</option>
+											<option value="IM">IM</option>
+											<option value="IMA">IMA</option>
+											<option value="ISA">ISA</option>
+											<option value="LAYGE">LAYGE</option>
+
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Estado:</label>
+									<div class="col-lg-9">
+										<select class="form-control form-control-select2" data-fouc>
+
+											<option value="EDMX">Edo. México</option>
+											<option value="CDMX">Cd. México</option>
+											<option value="TAM">Tamaulipas</option>
+											<option value="NL">Nuevo León</option>
+											<option value="CHL">Coahuila</option>
+											<option value="BC">Baja California</option>
+											<option value="BCS">Baja California Sur</option>
+											<option value="SN">Sonora</option>
+											<option value="NY">Nayarit</option>
+											<option value="SLP">San Luis Potosí</option>
+											<option value="ZCT">Zacatecas</option>
+											<option value="HD">Hidalgo</option>
+											<option value="VC">Veracruz</option>
+											<option value="GR">Guerrero</option>
+											<option value="MR">Morelia</option>
+											<option value="JLC">Jalisco</option>
+											<option value="QRT">Querétaro</option>
+											<option value="PBL">Puebla</option>
+											<option value="GNJ">Guanajuato</option>
+											<option value="TLX">Tlaxcala</option>
+											<option value="OAX">Oaxaca</option>
+											<option value="YCT">Yucatan</option>
+											<option value="QTO">Quintana Roo</option>
+											<option value="TBC">Tabasco</option>
+											<option value="CPS">Chiapas</option>
+											<option value="CHH">Chihuahua</option>
+											<option value="SNL">Sinaloa</option>
+											<option value="CLM">Colima</option>
+											<option value="CMP">Campeche</option>
+											<option value="DRN">Durango</option>
+											<option value="AGS">Aguascalientes</option>
+											<option value="MCN">Michoacan</option>
+											<option value="MRL">Morelos</option>
+
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Sexo:</label>
+									<div class="col-lg-9">
+										<div class="form-check form-check-inline">
+											<label class="form-check-label">
+												<input type="radio" class="form-input-styled" name="sexo" checked data-fouc>
+												Hombre
+											</label>
+										</div>
+
+										<div class="form-check form-check-inline">
+											<label class="form-check-label">
+												<input type="radio" class="form-input-styled" name="sexo" data-fouc>
+												Mujer
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Foto de perfil:</label>
+									<div class="col-lg-9">
+										<input type="file" class="form-input-styled" data-fouc>
+										<span class="form-text text-muted">Formatos permitidos: gif, png, jpg.</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
+								<button type="submit" class="btn bg-primary">Agregar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- agregar alumnos -->
+
+			<!-- modificar alumnos -->
+			<div id="modificar" class="modal fade" tabindex="-1">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Modificar</h5>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<form action="#" class="form-horizontal">
+							<div class="modal-body">
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Contraseña:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="Contraseña">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Correo electrónico:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="jepma2001@gmail.com">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Correo de recuperación:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="artus.mx@gmail.com">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Celular:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="8342213114">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Celular de recuperación:</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" placeholder="8341506192">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Carrera:</label>
+									<div class="col-lg-9">
+										<select class="form-control form-control-select2" data-fouc>
+
+											<option value="ITI">ITI</option>
+											<option value="IM">IM</option>
+											<option value="IMA">IMA</option>
+											<option value="ISA">ISA</option>
+											<option value="LAYGE">LAYGE</option>
+
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Foto de perfil:</label>
+									<div class="col-lg-9">
+										<input type="file" class="form-input-styled" data-fouc>
+										<span class="form-text text-muted">Formatos permitidos: gif, png, jpg.</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
+								<button type="submit" class="btn bg-primary">Agregar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- modificar alumnos -->
+
+			<!-- eliminar -->
+			<div id="eliminar" class="modal fade" tabindex="-1">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header bg-danger">
+							<h6 class="modal-title">Eliminar</h6>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<div class="modal-body">
+							<p>¿Está seguro que desea eliminar?</p>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
+							<button type="button" class="btn bg-danger">Confirmar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Eliminar -->
 
 			<!-- Footer -->
 			<div class="navbar navbar-expand-lg navbar-light">

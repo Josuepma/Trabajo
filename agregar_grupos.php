@@ -23,15 +23,11 @@
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
-	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
-	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 
 	<script src="assets/js/app.js"></script>
-	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/form_layouts.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -41,7 +37,7 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
-			<a href="index.html" class="d-inline-block">
+			<a href="index.php" class="d-inline-block">
 				<img src="../../../../global_assets/images/logo_light.png" alt="">
 			</a>
 		</div>
@@ -407,7 +403,7 @@
 						<!-- Main -->
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
 						<li class="nav-item">
-							<a href="index.html" class="nav-link active">
+							<a href="index.php" class="nav-link">
 								<i class="icon-home4"></i>
 								<span>
 									Dashboard
@@ -415,42 +411,40 @@
 							</a>
 						</li>
 						
+						
 						<!-- /main -->
 
 						<!-- Forms -->
-			
+		
 						<li class="nav-item nav-item-submenu nav-item-closed">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Alumnos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="agregar_alumnos.html" class="nav-link active">Agregar</a></li>
-								<li class="nav-item"><a href="consultar_alumnos.html" class="nav-link active">Lista</a></li>
-								<!--
-								<li class="nav-item"><a href="agregar_materias.html" class="nav-link active">Agregar materias</a></li>
-								<li class="nav-item"><a href="agregar_Materias.html" class="nav-link active">Agregar materias</a></li>-->
+								<li class="nav-item"><a href="agregar_alumnos.php" class="nav-link active">Agregar</a></li>
+								<li class="nav-item"><a href="consultar_alumnos.php" class="nav-link active">Lista</a></li>
 							</ul>
 						</li>
 
 						<li class="nav-item nav-item-submenu nav-item-closed">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Maestros</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="agregar_maestros.html" class="nav-link active">Agregar</a></li>
-								<li class="nav-item"><a href="consultar_maestros.html" class="nav-link active">Lista</a></li>
+								<li class="nav-item"><a href="agregar_maestros.php" class="nav-link active">Agregar</a></li>
+								<li class="nav-item"><a href="consultar_maestros.php" class="nav-link active">Lista</a></li>
 							</ul>
 						</li>
 
 						<li class="nav-item nav-item-submenu nav-item-closed">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Materias</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="agregar_materias.html" class="nav-link active">Agregar</a></li>
-								<li class="nav-item"><a href="consultar_materias.html" class="nav-link active">Lista</a></li>
+								<li class="nav-item"><a href="agregar_materias.php" class="nav-link active">Agregar</a></li>
+								<li class="nav-item"><a href="consultar_materias.php" class="nav-link active">Lista</a></li>
 							</ul>
 						</li>
 
-						<li class="nav-item nav-item-submenu nav-item-closed">
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Grupos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="agregar_grupos.html" class="nav-link active">Agregar</a></li>
-								<li class="nav-item"><a href="consultar_grupos.html" class="nav-link active">Lista</a></li>
+								<li class="nav-item"><a href="agregar_grupos.php" class="nav-link active">Agregar</a></li>
+								<li class="nav-item"><a href="consultar_grupos.php" class="nav-link active">Lista</a></li>
 							</ul>
 						</li>
 
@@ -474,7 +468,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Principal</span> - Tablero</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Agregar grupos</span> </h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -490,8 +484,8 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-							<span class="breadcrumb-item active">Dashboard</span>
+							<a href="index.php" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+							<span class="breadcrumb-item active">Agregar grupos</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -528,424 +522,69 @@
 			<!-- Content area -->
 			<div class="content">
 
-				<!-- Main charts -->
+				<!-- Horizontal form options -->
 				<div class="row">
-					<div class="table-responsive">
-						<table class="table text-nowrap">
-							<thead>
-								<tr>
-									<th>Campaign</th>
-									<th>Client</th>
-									<th>Changes</th>
-									<th>Budget</th>
-									<th>Status</th>
-									<th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="table-active table-border-double">
-									<td colspan="5">Today</td>
-									<td class="text-right">
-										<span class="progress-meter" id="today-progress" data-progress="30"></span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/facebook.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Facebook</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-blue mr-1"></span>
-													02:00 - 03:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Mintlime</span></td>
-									<td><span class="text-success-600"><i class="icon-stats-growth2 mr-2"></i> 2.43%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$5,489</h6></td>
-									<td><span class="badge bg-blue">Active</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/youtube.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Youtube videos</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-danger mr-1"></span>
-													13:00 - 14:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">CDsoft</span></td>
-									<td><span class="text-success-600"><i class="icon-stats-growth2 mr-2"></i> 3.12%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$2,592</h6></td>
-									<td><span class="badge bg-danger">Closed</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/spotify.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Spotify ads</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-grey-400 mr-1"></span>
-													10:00 - 11:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Diligence</span></td>
-									<td><span class="text-danger"><i class="icon-stats-decline2 mr-2"></i> - 8.02%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$1,268</h6></td>
-									<td><span class="badge bg-grey-400">On hold</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/twitter.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Twitter ads</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-grey-400 mr-1"></span>
-													04:00 - 05:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Deluxe</span></td>
-									<td><span class="text-success-600"><i class="icon-stats-growth2 mr-2"></i> 2.78%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$7,467</h6></td>
-									<td><span class="badge bg-grey-400">On hold</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
+					<div class="col-md-6">
 
-								<tr class="table-active table-border-double">
-									<td colspan="5">Yesterday</td>
-									<td class="text-right">
-										<span class="progress-meter" id="yesterday-progress" data-progress="65"></span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/bing.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Bing campaign</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-success mr-1"></span>
-													15:00 - 16:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Metrics</span></td>
-									<td><span class="text-danger"><i class="icon-stats-decline2 mr-2"></i> - 5.78%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$970</h6></td>
-									<td><span class="badge bg-success-400">Pending</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/amazon.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Amazon ads</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-danger mr-1"></span>
-													18:00 - 19:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Blueish</span></td>
-									<td><span class="text-success-600"><i class="icon-stats-growth2 mr-2"></i> 6.79%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$1,540</h6></td>
-									<td><span class="badge bg-blue">Active</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="d-flex align-items-center">
-											<div class="mr-3">
-												<a href="#">
-													<img src="../../../../global_assets/images/brands/dribbble.png" class="rounded-circle" width="32" height="32" alt="">
-												</a>
-											</div>
-											<div>
-												<a href="#" class="text-default font-weight-semibold">Dribbble ads</a>
-												<div class="text-muted font-size-sm">
-													<span class="badge badge-mark border-blue mr-1"></span>
-													20:00 - 21:00
-												</div>
-											</div>
-										</div>
-									</td>
-									<td><span class="text-muted">Teamable</span></td>
-									<td><span class="text-danger"><i class="icon-stats-decline2 mr-2"></i> 9.83%</span></td>
-									<td><h6 class="font-weight-semibold mb-0">$8,350</h6></td>
-									<td><span class="badge bg-danger">Closed</span></td>
-									<td class="text-center">
-										<div class="list-icons">
-											<div class="list-icons-item dropdown">
-												<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a href="#" class="dropdown-item"><i class="icon-file-stats"></i> View statement</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-text2"></i> Edit campaign</a>
-													<a href="#" class="dropdown-item"><i class="icon-file-locked"></i> Disable campaign</a>
-													<div class="dropdown-divider"></div>
-													<a href="#" class="dropdown-item"><i class="icon-gear"></i> Settings</a>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-
-
-				<!-- Dashboard content -->
-				<div class="row">
-					<div class="col-sm-6">
-
-						<!-- Available hours -->
-						<div class="card text-center">
-							<div class="card-body">
-
-			                	<!-- Progress counter -->
-								<div class="svg-center position-relative" id="hours-available-progress"></div>
-								<!-- /progress counter -->
-
-
-								<!-- Bars -->
-								<div id="hours-available-bars"></div>
-								<!-- /bars -->
-
-							</div>
-						</div>
-						<!-- /available hours -->
-
-					</div>
-
-					<div class="col-sm-6">
-
-						<!-- Productivity goal -->
-						<div class="card text-center">
-							<div class="card-body">
-
-								<!-- Progress counter -->
-								<div class="svg-center position-relative" id="goal-progress"></div>
-								<!-- /progress counter -->
-
-								<!-- Bars -->
-								<div id="goal-bars"></div>
-								<!-- /bars -->
-
-							</div>
-						</div>
-						<!-- /productivity goal -->
-
-					</div>
-
-					<div class="col-lg-4">
-
-						<!-- Members online -->
-						<div class="card bg-teal-400">
-							<div class="card-body">
-								<div class="d-flex">
-									<h3 class="font-weight-semibold mb-0">3,450</h3>
-									<span class="badge bg-teal-800 badge-pill align-self-center ml-auto">+53,6%</span>
-			                	</div>
-			                	
-			                	<div>
-									Members online
-									<div class="font-size-sm opacity-75">489 avg</div>
-								</div>
-							</div>
-
-							<div class="container-fluid">
-								<div id="members-online"></div>
-							</div>
-						</div>
-						<!-- /members online -->
-
-					</div>
-
-					<div class="col-lg-4">
-
-						<!-- Current server load -->
-						<div class="card bg-pink-400">
-							<div class="card-body">
-								<div class="d-flex">
-									<h3 class="font-weight-semibold mb-0">49.4%</h3>
-									<div class="list-icons ml-auto">
-				                		<div class="list-icons-item dropdown">
-				                			<a href="#" class="list-icons-item dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i></a>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-sync"></i> Update data</a>
-												<a href="#" class="dropdown-item"><i class="icon-list-unordered"></i> Detailed log</a>
-												<a href="#" class="dropdown-item"><i class="icon-pie5"></i> Statistics</a>
-												<a href="#" class="dropdown-item"><i class="icon-cross3"></i> Clear list</a>
-											</div>
-				                		</div>
-			                		</div>
-			                	</div>
-			                	
-			                	<div>
-									Current server load
-									<div class="font-size-sm opacity-75">34.6% avg</div>
-								</div>
-							</div>
-
-							<div id="server-load"></div>
-						</div>
-						<!-- /current server load -->
-
-					</div>
-
-					<div class="col-lg-4">
-
-						<!-- Today's revenue -->
-						<div class="card bg-blue-400">
-							<div class="card-body">
-								<div class="d-flex">
-									<h3 class="font-weight-semibold mb-0">$18,390</h3>
-									<div class="list-icons ml-auto">
+						<!-- Basic layout-->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Agregar grupos</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+				                		<a class="list-icons-item" data-action="collapse"></a>
 				                		<a class="list-icons-item" data-action="reload"></a>
+				                		<a class="list-icons-item" data-action="remove"></a>
 				                	</div>
 			                	</div>
-			                	
-			                	<div>
-									Today's revenue
-									<div class="font-size-sm opacity-75">$37,578 avg</div>
-								</div>
 							</div>
 
-							<div id="today-revenue"></div>
+							<div class="card-body">
+								<form action="#">
+									<div class="form-group row">
+										<label class="col-lg-3 col-form-label">Nombre:</label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control" placeholder="IM 1-1">
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="col-lg-3 col-form-label">ID:</label>
+										<div class="col-lg-9">
+											<input type="password" class="form-control" placeholder="1890">
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="col-lg-3 col-form-label">Año:</label>
+										<div class="col-lg-9">
+											<input type="password" class="form-control" placeholder="2018">
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="col-lg-3 col-form-label">Horario:</label>
+										<div class="col-lg-9">
+											<input type="password" class="form-control" placeholder="Vespertino">
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="col-lg-3 col-form-label">Tutor:</label>
+										<div class="col-lg-9">
+											<input type="password" class="form-control" placeholder="Gregorio Toscano Pulido">
+										</div>
+									</div>
+								</form>
+							</div>
 						</div>
-						<!-- /today's revenue -->
+						<!-- /basic layout -->
 
 					</div>
 
+					<div class="col-md-6">
 
 
-				</div>
-
-
-				<!-- /dashboard content -->
-
-				
-	
 			</div>
 			<!-- /content area -->
 
