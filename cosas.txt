@@ -1,0 +1,6 @@
+matricula
+nombre
+horario
+ruta
+fecha
+horario

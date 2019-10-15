@@ -416,7 +416,7 @@
 
 						<!-- Forms -->
 					
-						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+						<li class="nav-item nav-item-submenu nav-item-closed">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Alumnos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
 								<li class="nav-item"><a href="agregar_alumnos.html" class="nav-link active">Agregar</a></li>
@@ -448,7 +448,7 @@
 							</ul>
 						</li>
 
-						<li class="nav-item nav-item-submenu nav-item-closed">
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
 							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Pago Transpais</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
 								<li class="nav-item"><a href="Registro_pago.html" class="nav-link active">Registro</a></li>
@@ -475,7 +475,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Agregar alumnos</span> </h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Registro de pago Transpais</span> </h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -536,7 +536,7 @@
 						<!-- Basic layout-->
 						<div class="card">
 							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Agregar alumnos</h5>
+								<h5 class="card-title">Registro de pago</h5>
 								<div class="header-elements">
 									<div class="list-icons">
 				                		<a class="list-icons-item" data-action="collapse"></a>
@@ -549,6 +549,13 @@
 							<div class="card-body">
 								<form action="#">
 									<div class="form-group row">
+										<label class="col-lg-3 col-form-label">Matricula:</label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control" placeholder="1930168">
+										</div>
+									</div>
+
+									<div class="form-group row">
 										<label class="col-lg-3 col-form-label">Nombre:</label>
 										<div class="col-lg-9">
 											<input type="text" class="form-control" placeholder="Josue">
@@ -556,138 +563,38 @@
 									</div>
 
 									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Apellido:</label>
+										<label class="col-lg-3 col-form-label">Fecha:</label>
 										<div class="col-lg-9">
-											<input type="text" class="form-control" placeholder="Perales">
+											<input type="text" class="form-control" placeholder="16-10-2019">
 										</div>
-									</div>
+									</div>			
 
 									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Contraseña:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control" placeholder="Contraseña">
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Matricula:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control" placeholder="1930168">
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Correo electrónico:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control" placeholder="jepma2001@gmail.com">
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Correo de recuperación:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control" placeholder="artus.mx@gmail.com">
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Celular:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control" placeholder="8342213114">
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Celular de recuperación:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control" placeholder="8341506192">
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Carrera:</label>
+										<label class="col-lg-3 col-form-label">Horario:</label>
 										<div class="col-lg-9">
 											<select class="form-control form-control-select2" data-fouc>
 
-												<option value="ITI">ITI</option>
-												<option value="IM">IM</option>
-												<option value="IMA">IMA</option>
-												<option value="ISA">ISA</option>
-												<option value="LAYGE">LAYGE</option>
+												<option value="MAT">Matutino</option>
+												<option value="VES">Vespertino</option>
 
 											</select>
 										</div>
 									</div>
 
 									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Estado:</label>
+										<label class="col-lg-3 col-form-label">Ruta:</label>
 										<div class="col-lg-9">
 											<select class="form-control form-control-select2" data-fouc>
 
-												<option value="EDMX">Edo. México</option>
-												<option value="CDMX">Cd. México</option>
-												<option value="TAM">Tamaulipas</option>
-												<option value="NL">Nuevo León</option>
-												<option value="CHL">Coahuila</option>
-												<option value="BC">Baja California</option>
-												<option value="BCS">Baja California Sur</option>
-												<option value="SN">Sonora</option>
-												<option value="NY">Nayarit</option>
-												<option value="SLP">San Luis Potosí</option>
-												<option value="ZCT">Zacatecas</option>
-												<option value="HD">Hidalgo</option>
-												<option value="VC">Veracruz</option>
-												<option value="GR">Guerrero</option>
-												<option value="MR">Morelia</option>
-												<option value="JLC">Jalisco</option>
-												<option value="QRT">Querétaro</option>
-												<option value="PBL">Puebla</option>
-												<option value="GNJ">Guanajuato</option>
-												<option value="TLX">Tlaxcala</option>
-												<option value="OAX">Oaxaca</option>
-												<option value="YCT">Yucatan</option>
-												<option value="QTO">Quintana Roo</option>
-												<option value="TBC">Tabasco</option>
-												<option value="CPS">Chiapas</option>
-												<option value="CHH">Chihuahua</option>
-												<option value="SNL">Sinaloa</option>
-												<option value="CLM">Colima</option>
-												<option value="CMP">Campeche</option>
-												<option value="DRN">Durango</option>
-												<option value="AGS">Aguascalientes</option>
-												<option value="MCN">Michoacan</option>
-												<option value="MRL">Morelos</option>
-
+												<option value="EDMX">Moderna</option>
+												<option value="CDMX">Centro</option>
+												<option value="TAM">Conalep</option>
+												<option value="NL">Libertad</option>
+												
 											</select>
 										</div>
 									</div>
 
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Sexo:</label>
-										<div class="col-lg-9">
-											<div class="form-check form-check-inline">
-												<label class="form-check-label">
-													<input type="radio" class="form-input-styled" name="sexo" checked data-fouc>
-													Hombre
-												</label>
-											</div>
-
-											<div class="form-check form-check-inline">
-												<label class="form-check-label">
-													<input type="radio" class="form-input-styled" name="sexo" data-fouc>
-													Mujer
-												</label>
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Foto de perfil:</label>
-										<div class="col-lg-9">
-											<input type="file" class="form-input-styled" data-fouc>
-											<span class="form-text text-muted">Formatos permitidos: gif, png, jpg.</span>
-										</div>
-									</div>
 
 								</form>
 							</div>
