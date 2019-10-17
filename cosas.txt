@@ -4,3 +4,38 @@ horario
 ruta
 fecha
 horario
+
+laracasts
+
+En un documento un corte de caja de expectativas y perspectivas de la materia 
+Todo lo que pensamos de la materia en particular
+lo que hemos encontrado 
+lo que ya sabía lo que no lo que me gusta
+lo que pienso que me va a servir lo que no
+
+
+Investigar un caso particular en el que se pueda implementar un sistema de información (innovador)
+nombre de sistema
+objetivos
+justificación
+impacto
+
+
+Fundamentos de arquitectura de computadoras
+Redes en Cisco Packet Tracer
+Sistemas de información con admin themes (fundamentos)
+
+Sistema simulador de procesos químicos(Educacional)
+SSPQ
+Objetivo: ayudar a los estudiantes a aprender procesos químicos básicos y no gastar recursos 
+Justificación: Desperdicio de materiales a la hora de hacer experimentos químicos y capacidad de realizar los experimentos sin supervición y riesgos
+impacto: pienso que generaría un gran impacto educacional
+
+
+
+GPS en tiempo real en transporte publico o privado(Aplicacion para celular)
+
+MiTransporte
+Objetivo: Aplicación para saber rutas de autobuses, transporte público, táxis, uber, valorarlas, favoritos, guardarla, cualquier ciudad y conocer su ubicación en tiempo real para saber cuanto tardará en llegar.
+Justificación: No esperar por tiempo a que llegue el transporte, automatización del proceso de elección de ruta, que todos los ciudadanos puedan conocer las rutas disponibles, tener todos los servicios en una aplicación
+impacto: un gran impacto social ya que todos usamos el transporte público en cualquiera de sus formas 
